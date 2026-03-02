@@ -57,7 +57,8 @@ function App() {
 
   return (
     <div className="d-flex flex-column align-items-center w-100" style={{ minHeight: '100vh' }}>
-      <header className="w-100 p-4 text-center text-white shadow" style={{ backgroundColor: '#10621A' }}>
+      <h1>Prueba subida GitHub</h1>
+  <header className="w-100 p-4 text-center text-white shadow" style={{ backgroundColor: '#10621A' }}>
         <h1 style={{ fontWeight: 'bold' }}>alimentos pronalfrut</h1>
         <p className="mb-0">Propuesta de Rediseño - Mockup Funcional</p>
       </header>
