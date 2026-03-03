@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-"homepage": "https://lzuluaga07.github.io/Proyecto-react/",
+  "homepage": "https://lzuluaga07.github.io/Proyecto-react/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -15,7 +15,8 @@
   "dependencies": {
     "bootstrap": "^5.3.8",
     "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "react-dom": "^19.2.0",
+    "react-router-dom": "^7.13.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
