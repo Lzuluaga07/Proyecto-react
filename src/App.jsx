@@ -142,7 +142,7 @@ function App() {
 
         <div className="mt-5 p-4 border rounded shadow-sm bg-white border-primary">
           <p className="fw-bold" style={{ color: '#10621A' }}>¿Deseas ver el reporte detallado?</p>
-          <a href="/sprint 2.docx" download="Sprint_2_Reporte.docx" style={{ textDecoration: 'none' }}>
+          <a href="/sprint_2.docx" download="Sprint_2_Reporte.docx" style={{ textDecoration: 'none' }}>
             <button className="btn btn-lg text-white" style={{ backgroundColor: '#6a1b9a', borderRadius: '50px', padding: '12px 40px', fontWeight: 'bold' }}>
               Descargar Sprint 2 📄🚀
             </button>
