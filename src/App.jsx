@@ -63,7 +63,7 @@ function App() {
       {/* HEADER: Verde Pronalfrut */}
       <header className="w-100 p-4 text-center text-white shadow" style={{ backgroundColor: '#10621A', borderBottom: '5px solid #6a1b9a' }}>
         <h1 style={{ fontWeight: 'bold', textTransform: 'uppercase' }}>alimentos pronalfrut</h1>
-        <p className="mb-0">Mockup Profesional - Responsive Design</p>
+        <p className="mb-0">Mockup - Responsive Design</p>
       </header>
 
       <main className="container text-center py-5" style={{ maxWidth: '1200px' }}>
@@ -177,3 +177,4 @@ function App() {
 }
 
 export default App;
+
