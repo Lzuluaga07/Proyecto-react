@@ -5,6 +5,7 @@ function App() {
   const [seleccionadas, setSeleccionadas] = useState([]);
   const [presentacionElegida, setPresentacionElegida] = useState(null);
 const [cantidades, setCantidades] = useState({});
+const [unidad, setUnidad] = useState('lb'); // Por defecto en libras
   // Colores Pronalfrut: Verde (#10621A), Morado (#6a1b9a), Blanco (#FFFFFF), Negro (#212529)
 
   const frutas = [
@@ -123,27 +124,40 @@ const modificarCantidad = (id, delta) => {
                     <p className="mb-1 small"><strong>Remedio:</strong> {fruta.remedio}</p>
                     <p className="mb-1 small"><strong>Beneficios:</strong> {fruta.beneficios}</p>
                     <p className="small"><strong>Uso:</strong> {fruta.uso}</p>
-               {/* Selector de Unidades/Kilos */}
-                    <div className="d-flex align-items-center justify-content-between mt-3 p-2 rounded border bg-light">
-                      <span className="small fw-bold text-dark">Pedir (lb/kg):</span>
-                      <div className="d-flex align-items-center">
-                        <button 
-                          className="btn btn-sm btn-outline-danger fw-bold shadow-sm"
-                          onClick={(e) => { e.stopPropagation(); modificarCantidad(fruta.id, -1); }}
-                          style={{ width: '30px' }}
-                        > - </button>
-                        
-                        <span className="mx-3 fw-bold" style={{ minWidth: '20px', textAlign: 'center' }}>
-                          {cantidades[fruta.id] || 0}
-                        </span>
-                        
-                        <button 
-                          className="btn btn-sm btn-outline-success fw-bold shadow-sm"
-                          onClick={(e) => { e.stopPropagation(); modificarCantidad(fruta.id, 1); }}
-                          style={{ width: '30px' }}
-                        > + </button>
-                      </div>
-                    </div>
+              {/* Selector de Unidades y Kilos Detallado */}
+<div className="mt-3 p-2 rounded border bg-light">
+  <div className="d-flex justify-content-between align-items-center mb-2">
+    <select 
+      className="form-select form-select-sm w-50" 
+      style={{ fontSize: '0.8rem' }}
+      onChange={(e) => setUnidad(e.target.value)}
+      onClick={(e) => e.stopPropagation()}
+    >
+      <option value="lb">Libras (lb)</option>
+      <option value="kg">Kilos (kg)</option>
+    </select>
+    <span className="small fw-bold text-muted">Cantidad</span>
+  </div>
+
+  <div className="d-flex align-items-center justify-content-center">
+    <button 
+      className="btn btn-sm btn-outline-danger fw-bold shadow-sm"
+      onClick={(e) => { e.stopPropagation(); modificarCantidad(fruta.id, -1); }}
+      style={{ width: '35px' }}
+    > - </button>
+    
+    <div className="mx-3 text-center">
+      <span className="fw-bold fs-5">{cantidades[fruta.id] || 0}</span>
+      <span className="ms-1 small text-uppercase">{unidad}</span>
+    </div>
+    
+    <button 
+      className="btn btn-sm btn-outline-success fw-bold shadow-sm"
+      onClick={(e) => { e.stopPropagation(); modificarCantidad(fruta.id, 1); }}
+      style={{ width: '35px' }}
+    > + </button>
+  </div>
+</div>
                   </div>
                 </div>
               </div>
