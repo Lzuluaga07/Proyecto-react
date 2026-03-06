@@ -8,27 +8,26 @@ const [cantidades, setCantidades] = useState({});
 const [unidad, setUnidad] = useState('lb'); // Por defecto en libras
   // Colores Pronalfrut: Verde (#10621A), Morado (#6a1b9a), Blanco (#FFFFFF), Negro (#212529)
 
-  const frutas = [
+ const frutas = [
     {
       id: 1, nombre: 'Naranja', emoji: '🍊',
-      remedio: 'Infusión de cáscara para la digestión.',
-      beneficios: 'Alta en Vitamina C y antioxidantes.',
-      uso: 'Jugos, repostería y consumo directo.'
+      remedio: 'Pulpa diluida en agua tibia con miel para aliviar resfriados.', // Antes hablaba de cáscara
+      beneficios: 'Alta en Vitamina C conservada por frío.',
+      uso: 'Bases para jugos, postres y jarabes caseros.'
     },
     {
       id: 2, nombre: 'Níspero', emoji: '🍈',
-      remedio: 'Té de hojas para desinflamar la garganta.',
-      beneficios: 'Rico en potasio y fibra natural.',
-      uso: 'Mermeladas, postres y almíbares.'
-    },
+      remedio: 'Batido de pulpa con leche para mejorar el tránsito intestinal.',
+      beneficios: 'Aporte de fibra natural de la fruta procesada.',
+      uso: 'Ideal para repostería y salsas dulces.'
+    }, 
     {
       id: 3, nombre: 'Guanábana', emoji: '🍏',
-      remedio: 'Jugo natural para fortalecer las defensas.',
-      beneficios: 'Propiedades hidratantes y antiinflamatorias.',
-      uso: 'Batidos, helados y base para yogur.'
+      remedio: 'Cataplasma frío de pulpa para calmar inflamaciones leves.',
+      beneficios: 'Propiedades hidratantes de la pulpa pura.',
+      uso: 'Cremas, helados y base para yogur artesanal.'
     }
   ];
-
   const presentaciones = [
     { id: 'p1', tamano: '100g', uso: 'Individual' },
     { id: 'p2', tamano: '130g', uso: 'Snack' },
