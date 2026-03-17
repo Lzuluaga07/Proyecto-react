@@ -65,49 +65,24 @@ const modificarCantidad = (id, delta) => {
 
   return (
     <div className="d-flex flex-column align-items-center w-100" style={{ minHeight: '100vh', backgroundColor: '#FFFFFF', color: '#212529', fontFamily: '"Montserrat", sans-serif' }}>
-     {/* --- INICIO DEL NAVBAR COMPLETO --- */}
-<nav className="navbar navbar-expand-lg navbar-light bg-white border-bottom w-100 shadow-sm">
+     <nav className="navbar navbar-expand-lg navbar-light bg-white border-bottom w-100 shadow-sm sticky-top">
   <div className="container-fluid">
-    
-    {/* 1. Logo o Nombre de la Empresa */}
-    <a className="navbar-brand fw-bold text-success" href="#">
-      PRONALFRUT
-    </a>
-
-    {/* 2. El Botón de las 3 rayitas (Solo aparece en celulares) */}
-    <button 
-      className="navbar-toggler" 
-      type="button" 
-      data-bs-toggle="collapse" 
-      data-bs-target="#navbarNav" 
-      aria-controls="navbarNav" 
-      aria-expanded="false" 
-      aria-label="Toggle navigation"
-    >
+    <a className="navbar-brand fw-bold text-success" href="#">PRONALFRUT</a>
+    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span className="navbar-toggler-icon"></span>
     </button>
-
-    {/* 3. El contenedor de los enlaces (Se esconde en el botón anterior) */}
     <div className="collapse navbar-collapse" id="navbarNav">
       <ul className="navbar-nav ms-auto">
+        <li className="nav-item"><a className="nav-link" href="#">Inicio</a></li>
+        <li className="nav-item"><a className="nav-link" href="#seccion-frutas">Frutas</a></li>
         <li className="nav-item">
-          <a className="nav-link active" href="#">Inicio</a>
+          <a className="nav-link text-primary fw-bold" href="/sprint_2.docx" download>Sprint 2 📄</a>
         </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">Frutas</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link text-primary fw-bold" href="#">Reporte Sprint 2</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">Contacto</a>
-        </li>
+        <li className="nav-item"><a className="nav-link" href="#seccion-contacto">Contacto</a></li>
       </ul>
     </div>
-
   </div>
 </nav>
-{/* --- FIN DEL NAVBAR --- */}
       {/* HEADER: Verde Pronalfrut */}
       <header className="w-100 p-4 text-center text-white shadow" style={{ backgroundColor: '#10621A', borderBottom: '5px solid #6a1b9a' }}>
         <h1 style={{ fontWeight: 'bold', textTransform: 'uppercase' }}>alimentos pronalfrut</h1>
@@ -141,7 +116,7 @@ const modificarCantidad = (id, delta) => {
           </button>
         </div>
 
-        <h2 className="mb-4 fw-bold" style={{ color: '#10621A' }}>Nuestras Frutas y Beneficios</h2>
+        <h2  id= "seccion-frutas" className="mb-4 fw-bold" style={{ color: '#10621A' }}>Nuestras Frutas y Beneficios</h2>
 
         {/* CARDS DE FRUTAS: Responsive (1 col en móvil, 3 en PC) */}
         <div className="row g-4 justify-content-center">
@@ -250,10 +225,22 @@ const modificarCantidad = (id, delta) => {
 
       </main>
 
-      {/* FOOTER: Verde Pronalfrut */}
-      <footer className="w-100 p-3 text-center text-white mt-auto" style={{ backgroundColor: '#10621A' }}>
-        <p className="mb-0">© 2026 alimentos pronalfrut - Calidad Natural</p>
-      </footer>
+     {/* FOOTER: Verde Pronalfrut con Ubicación */}
+<footer id="seccion-contacto" className="w-100 p-4 text-center text-white mt-auto" style={{ backgroundColor: '#155724', borderTop: '4px solid #6a1b9a' }}>
+  <div className="container">
+    <p className="fw-bold mb-1">ALIMENTOS PRONALFRUT</p>
+    <p className="mb-2">📍 Cra 64a # 4b-41 - Bogotá, Colombia</p>
+    <a 
+      href="https://www.google.com/maps/search/Cra+64a+%23+4b-41+Bogota" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      className="btn btn-sm btn-outline-light"
+    >
+      Ver en Google Maps
+    </a>
+    <p className="mt-3 mb-0 small">© 2026 Alimentos Pronalfrut - Calidad Natural</p>
+  </div>
+</footer>
     </div>
   );
 }
