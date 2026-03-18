@@ -76,8 +76,14 @@ const modificarCantidad = (id, delta) => {
         <li className="nav-item"><a className="nav-link" href="#">Inicio</a></li>
         <li className="nav-item"><a className="nav-link" href="#seccion-frutas">Frutas</a></li>
         <li className="nav-item">
-          <a className="nav-link text-primary fw-bold" href="/sprint_2.docx" download>Sprint 2 📄</a>
-        </li>
+  <a 
+    className="nav-link text-primary fw-bold" 
+    href="/Proyecto-react/sprint_2.docx"
+    download="sprint_2.docx"
+  >
+    Sprint 2 📄
+  </a>
+</li>
         <li className="nav-item"><a className="nav-link" href="#seccion-contacto">Contacto</a></li>
       </ul>
     </div>
@@ -210,17 +216,18 @@ const modificarCantidad = (id, delta) => {
         <div className="mt-5 p-5 border rounded shadow-sm bg-white" style={{ borderColor: '#10621A' }}>
           <p className="fw-bold fs-5" style={{ color: '#10621A' }}>¿Deseas ver el reporte detallado?</p>
           <a 
-            href={`/Proyecto-react/sprint_2.docx?v=${new Date().getTime()}`} 
-            download="sprint_2.docx" 
-            style={{ textDecoration: 'none' }}
-          >
-            <button 
-              className="btn btn-lg text-white shadow" 
-              style={{ backgroundColor: '#6a1b9a', borderRadius: '50px', padding: '15px 50px', fontWeight: 'bold' }}
-            >
-              Descargar Sprint 2 📄🚀
-            </button>
-          </a>
+         
+  href={`${import.meta.env.BASE_URL}sprint_2.docx`}
+  download="sprint_2.docx"
+  style={{ textDecoration: 'none' }}
+>
+  <button 
+    className="btn btn-lg text-white shadow"
+    style={{ backgroundColor: '#6a1b9a', borderRadius: '50px', padding: '15px 30px' }}
+  >
+    Descargar Sprint 2 📄🚀
+  </button>
+</a>  
         </div>
 
       </main>
