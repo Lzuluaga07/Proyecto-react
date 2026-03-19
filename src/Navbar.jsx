@@ -10,12 +10,8 @@ function Navbar() {
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
-            <li className="nav-item">
-              <a className="nav-link" href="#">Inicio</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#seccion-frutas">Frutas</a>
-            </li>
+            <li className="nav-item"><a className="nav-link" href="#">Inicio</a></li>
+            <li className="nav-item"><a className="nav-link" href="#seccion-frutas">Frutas</a></li>
             <li className="nav-item">
               <a 
                 className="nav-link text-primary fw-bold" 
@@ -25,9 +21,7 @@ function Navbar() {
                 Sprint 2 📄
               </a>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#seccion-contacto">Contacto</a>
-            </li>
+            <li className="nav-item"><a className="nav-link" href="#seccion-contacto">Contacto</a></li>
           </ul>
         </div>
       </div>
